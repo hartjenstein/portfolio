@@ -37,52 +37,8 @@ video#bgvid {
     background: url(polina.jpg) no-repeat;
     background-size: cover; 
 }
-#work h2, #work p {
-    color: white;
-}
 
-#work {
-    position:absolute;
-    z-index: 100;
-    top: 3%;
-    left: 36%;
-    height: 20%;
-    width:30%;
-} 
 
-@media (min-width : 640px)
-and (max-width : 1005px) {
-    #work p {
-        width: 50%;
-        margin-left: 25%;
-    }
-}
-@media (max-width : 664px) {
-    #work p {
-        display:none;
-    }
-}
-@media (max-width : 640px) {
-    #work h2 {
-        width: 50%;
-        top: 50%;
-    }
-}
-@media (max-width : 375px) {
-    #work>h2 {
-        width: 50%;
-        top: 50%;
-        left: 25%;
-    }
-}
-@media (min-width : 376px)
-and (max-width : 480px) {
-    #work>h2 {
-        width: 50%;
-        top: 50%;
-        left: 35%;
-    }
-}
 body {
 	margin: 0px;
 	font-family: "Raleway", Sans-serif;
@@ -152,16 +108,18 @@ section {
 2. Navigation
 --------------------*/
 a#brand {
+    margin-top: .3em;
     margin-left: 5vh;
 }
 .navbar-default {
-	background-color: #F1F1F1;
-	border-color: transparent
+	background-color: rgba(0, 0, 0, .4);
+    border-color: transparent;
+    margin-bottom: 0!important;
 }
 .navbar-default .navbar-brand {
     /* color: black; */
     color: white;
-    padding: 5px;
+    padding: .5em .5em 0 .5em;
 }
 .navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
 	color: #fec503
@@ -244,7 +202,7 @@ a#brand {
 --------------------*/
 
 .section-title {
-    padding-bottom: 30px;
+    padding-bottom: .5em;
 }
 
 .section-title h2 {
@@ -363,7 +321,9 @@ font-weight: 700;
 /*section#portfolio {
     margin-top: -35vh;
 }*/
-
+section#portfolio {
+    padding-top: 0;
+}
 
 figure {
 	position: relative;
