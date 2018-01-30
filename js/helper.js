@@ -3,7 +3,7 @@ $(function () {
 
 		  
     var config = {
-        apiKey: "AIzaSyBanG2gcAOS-HCwB-WRvfVb7O0Ep5vgiwg",
+        apiKey: SECRET_FIREBASE,
         authDomain: "contact-form-portfoilio.firebaseapp.com",
         databaseURL: "https://contact-form-portfoilio.firebaseio.com",
         projectId: "contact-form-portfoilio",
