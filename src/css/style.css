@@ -501,10 +501,19 @@ figure.effect-bubba:hover p {
 div#position {
     font-size: 1.5em;
 }
+
 img#geist {
-    height: 90%;
-    width: 90%;
+    height: auto;
+    width: 50%;
     display: inline-block;
+
+   
+}
+
+@media only screen and (min-width: 992px) {
+    img#geist {
+        width: 100%;
+    }
 }
 
 .about-item {
