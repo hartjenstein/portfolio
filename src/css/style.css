@@ -321,6 +321,16 @@ font-weight: 700;
 /*section#portfolio {
     margin-top: -35vh;
 }*/
+
+#portfolio-scroll > h2 {
+    display: inline-block
+}
+
+#portfolio-scroll > h2:hover {
+    text-decoration: inherit;
+    text-decoration-color: #fec503;
+}
+
 section#portfolio {
     padding-top: 0;
 }
