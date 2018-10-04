@@ -1,4 +1,5 @@
 // Initialize Firebase
+console.log('test')
 $(function () {
 
 		  

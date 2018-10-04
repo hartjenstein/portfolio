@@ -894,6 +894,7 @@ pre {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   /* ideally, transition speed should match zoom duration */
   -webkit-transition: all 0.3s ease-out;
@@ -963,4 +964,12 @@ a > img {
 		margin-left: auto;
 		margin-right: auto
 	}
+}
+
+// Modals
+
+#Modal-dsgvo {
+  h1,h2,h3,h4 {
+    color: black;
+  }
 }

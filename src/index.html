@@ -48,7 +48,7 @@
 						</li>
 						<li>
 							<a class="page-scroll" href="#contact">Contact</a>
-						</li>
+            </li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -61,7 +61,7 @@
 			<div id="work" class="row">
 				<div class="text-center">
 					<div class="section-title" >
-						<a class="page-scroll" href="#portfolio-scroll"><h2> Work </h2></a>
+						<a class="page-scroll portfolio-scroll" href="#portfolio-scroll"><h2> Work </h2></a>
 						<p>My projects at a glance.</p>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="portfolio-scroll"class="row row-0-gutter">
+			<div id="portfolio-scroll" class="row row-0-gutter">
 				<!-- start portfolio item -->
 				<div id="portfolioItem" class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
@@ -93,8 +93,8 @@
 						<figure class="effect-bubba">
 							<img src="images/demo/portfolio-2.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
-								<h2>FRAMEWORKS</h2>
-								<p>REACT | ANGULAR2 | BOOTSTRAP</p>
+								<h2>REACT</h2>
+								<p>View Projects</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-2">View more</a>
 							</figcaption>
 						</figure>
@@ -109,7 +109,7 @@
 						<figure class="effect-bubba">
 							<img src="images/demo/portfolio-3.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
-								<h2>HTML5&nbsp;&amp;&nbsp;CSS&nbsp;|&nbsp;SCSS</h2>
+								<h2>REDUX</h2>
 								<p>View projects</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-3">View more</a>
 							</figcaption>
@@ -123,8 +123,8 @@
 						<figure class="effect-bubba">
 							<img src="images/demo/portfolio-3.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
-								<h2>Backend</h2>
-								<p> SQL | NOSQL | SERVERLESS | NODEJS </p>
+								<h2>PWA</h2>
+								<p> PROGRESSIVE WEB APPS | SERVICE WORKERS</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-4">View more</a>
 							</figcaption>
 						</figure>
@@ -163,8 +163,8 @@
 					</div>
 						<div class="skills-item">
 							<div class="skills-text">
-								<h3>N Hartjenstein</h3>
-								<div id="position" class="skills-position">Online Marketer & Web Developer, based in Berlin. </div>
+								<h3 id="about__title">N Hartjenstein</h3>
+								<div id="about__position" class="skills-position">Online Marketer & Web Developer, based in Berlin. </div>
 								<p>Feel free to contact me for any project suggestions.</p>
 							</div>
 						</div>
@@ -174,7 +174,7 @@
 			</div>
 		</section>
 
-	<!-- 	<section id="contact">
+		<section id="contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
@@ -186,17 +186,21 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<form name="sentMessage" class="js-form" id="contactForm" novalidate="">
+              <div class="alert alert-success">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <strong>Thank you! I will get back to you A.S.A.P</strong> 
+                </div>
+						<form role="form" name="sentMessage" class="js-form contactForm" id="contactForm" novalidate="">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Your Name *" id="name" required="" data-validation-required-message="Please enter your name.">
+										<input type="text" class="form-control" placeholder="Your Name *" id="name" pattern="^([a-zA-Z\s]{3,})$" required name="name" data-parsley-required-message="Please enter your name">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
+										<input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" required data-parsley-required-message="Please enter your email adress">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -204,7 +208,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea class="form-control" placeholder="Your Message *" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+										<textarea class="form-control" placeholder="Your Message *" id="message" name="textfield" required data-parsley-required-message="Your message to me?"></textarea>
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -213,14 +217,14 @@
 							<div class="row">
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
-									<button type="submit" id="submit" class="btn">Send Message</button>
+									<button type="submit" id="submit" class="btn btn-default">Send Message</button>
 								</div>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 		<p id="back-top">
 			<a href="#top"><i class="fa fa-angle-up"></i></a>
 		</p>
@@ -238,10 +242,36 @@
 					</div>
 					<div class="modal-body">
 						<img src="images/js1.png" alt="javascript logo" class="img-responsive" />
-						<div class="modal-works"><span>Vanilla</span><span>JavaScript</span></div>
-						<p>Have a look at some vanilla JavaScript projects, I've created:</p>
-						<p></p>
-					</div>
+            <div class="modal-works"><span>Vanilla</span><span>JavaScript</span></div>
+         
+              
+              <div class="modal-item-container">
+                <h4>Have a look at some vanilla JavaScript projects, I've created:</h4>
+                <ul>
+                  <a href="https://local-weather-vanillajs.firebaseapp.com/">
+                    <li class="modal-item">
+                      <span class="modal-item__link-title" >Local Weather - VanillaJS</span>
+                      <p>A basic weather App created with ES6</p>
+                      <h4 class="modal-item__feature-title">Features</h4>
+                      <ul class="modal-item__features">
+                        <li>Openweather Api</li>
+                        <li>Google Maps Api</li>
+                      </ul>
+                    </li>
+                  </a>
+                  <a href="https://local-weather-vanillajs.firebaseapp.com/">
+                    <li class="modal-item">
+                      <span class="modal-item__link-title" >The Simon Game</span>
+                      <p>The Kids game classic Simon Game created with ES6</p>
+                      <h4 class="modal-item__feature-title">Features</h4>
+                      <ul class="modal-item__features">
+                        <li>Game Logic in VanillaJS</li>
+                      </ul>
+                    </li>
+                  </a>
+                </ul>
+              </div>
+            </div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
@@ -255,22 +285,60 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h2 class="modal-title" id="Modal-label-2">REACT & Angular2 (4) </h2>
+            <h4 class="modal-title" id="Modal-label-1">Projects involving React</h4>
 					</div>
 					<div class="modal-body">
 						<img src="images/react3.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>JS</span><span>Frameworks</span></div>
-						<h3> Web Apps based on REACT:</h3>
-						<ul>
-							<li>
-								<a href="http://obscure-forest-41981.herokuapp.com/#/?_k=dhjxek" target="_blank">REACT Weather API</a>
-							</li>
-							<li>
-								<a href="http://quiet-bayou-16895.herokuapp.com/#/?_k=5uvji6" target="_blank">REACT Countdown Timer</a>
-							</li>
-						</ul>
-						
-					</div>
+						<div class="modal-works"><span>JS</span><span>React</span></div>        
+            <div class="modal-item-container">
+                <h4>Web Apps based on REACT:</h4>
+                <ul>
+                    <a href="https://expense-budget-app.herokuapp.com">
+                      <li class="modal-item">
+                        <span class="modal-item__link-title" >React Budget Control App</span>
+                        <p>Responsive mobile first app with Redux and Firebase realtime database integration. </p>
+                        <h4 class="modal-item__feature-title">Features</h4>
+                        <ul class="modal-item__features">
+                          <li>Redux</li>
+                          <li>mobile first</li>
+                          <li>serverless with Firebase</li>
+                          <li>realtime database</li>
+                          <li>authentication</li>
+                          <li>BEM - Objectoriented SCSS</li>
+                          <li>data sync across devices</li>
+                        </ul>
+                      </li>
+                    </a>
+                  <a href="http://obscure-forest-41981.herokuapp.com/#/?_k=dhjxek">
+                    <li class="modal-item">
+                      <span class="modal-item__link-title" >React Weather API</span>
+                      <p>A basic weather app created with React</p>
+                      <h4 class="modal-item__feature-title">Features</h4>
+                      <ul class="modal-item__features">
+                        <li>React</li>
+                        <li>Openweather Api</li>
+                        <li>Webpack</li>
+                        <li>SCSS</li>
+                      </ul>
+                    </li>
+                  </a>
+                  <a href="http://quiet-bayou-16895.herokuapp.com/#/?_k=5uvji6">
+                    <li class="modal-item">
+                      <span class="modal-item__link-title" >React Countdown Timer</span>
+                      <p>A countdown &amp; timer app created with react</p>
+                      <h4 class="modal-item__feature-title">Features</h4>
+                      <ul class="modal-item__features">
+                        <li>React</li>
+                        <li>Webpack</li>
+                        <li>Foundation</li>
+                        <li>SCSS</li>
+                      </ul>
+                    </li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+   
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
@@ -284,13 +352,33 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-3">HTMl5 & CSS</h4>
+						<h4 class="modal-title" id="Modal-label-3">Projects involving Redux</h4>
 					</div>
 					<div class="modal-body">
-						<img src="images/html51.png" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>responsive</span><span>barrier free</span><span>bootstrap</span><span>foundation</span></div>
-						<p>Creating responsive and barrier free HTML with the of Bootstrap, Handlebars and Foundation.</p>
-					</div>
+						<img src="images/redux.png" alt="img01" class="img-responsive" />
+          <div class="modal-item-container">
+              <h4>React Apps with Redux:</h4>
+              <ul>
+                <a href="https://expense-budget-app.herokuapp.com">
+                  <li class="modal-item">
+                    <span class="modal-item__link-title" >React Budget Control App</span>
+                    <p>Responsive mobile first app with Redux and Firebase realtime database integration. </p>
+                    <p>Data gets synced in realtime across all logged in devices.</p>
+                    <h4 class="modal-item__feature-title">Features</h4>
+                    <ul class="modal-item__features">
+                      <li>Redux</li>
+                      <li>mobile first</li>
+                      <li>serverless with Firebase</li>
+                      <li>realtime database</li>
+                      <li>authentication</li>
+                      <li>BEM - Objectoriented SCSS</li>
+                      <li>data sync across devices</li>
+                    </ul>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
@@ -304,13 +392,31 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-4">Projects involving NodeJS, NoSQL & SQL and Serverless Architecture</h4>
+						<h4 class="modal-title" id="Modal-label-4">Apps utilizing service workers </h4>
 					</div>
 					<div class="modal-body">
-						<img src="images/mongodb.png" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>MongoDB</span><span>MySQL</span><span>Firebase</span><span>NodeJS</span></div>
-						<p><span class="modal-item">Serverless:</span></span>  My portfolio form uses Nodemailer and is connected to a Google Firebase database.</p>
-					</div>
+              <img src="images/pwa.png" alt="img01" class="img-responsive" />
+              <div class="modal-item-container">
+                  <h4>Progressive Web Apps</h4>
+                  <ul>
+                    <a href="https://the-call.herokuapp.com">
+                      <li class="modal-item">
+                        <span class="modal-item__link-title" >React Crunchtime Web App</span>
+                        <p>This is a very simple progressive web app which utilizes service workers, created with Googles Worbox service worker library </p>
+                        <p>It has offline capabilities, increased loading speed through precaching and can be added as an application to your phones homescreen</p>
+                        <h4 class="modal-item__feature-title">Features</h4>
+                        <ul class="modal-item__features">
+                          <li>precaching with service workers</li>
+                          <li>Blazing fast load time</li>
+                          <li>Offline capability</li>
+                          <li>Add to home screen on smart phones</li>
+                          <li>Googles Worxbox with webpack</li>
+                        </ul>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
@@ -318,30 +424,80 @@
 			</div>
 		</div>
 
-		<!-- Modal for portfolio item 5 -->
-		<div class="modal fade" id="Modal-5" tabindex="-1" role="dialog" aria-labelledby="Modal-label-5">
+    		<!-- Modal for portfolio item Datenschutz -->
+		<div class="modal fade" id="Modal-dsgvo" tabindex="-1" role="dialog" aria-labelledby="Modal-label-5">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-5">Fast People</h4>
+						<h4 class="modal-title" id="Modal-dsgvo">Datenschutz</h4>
 					</div>
 					<div class="modal-body">
-						<img src="images/demo/portfolio-5.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
-					</div>
+      
+              <h1>Datenschutzerklärung:</h1>
+        
+        
+              <h2>Verantwortliche Stelle</h2>
+              
+              <p>Verantwortliche Stelle für die Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten im Sinne des Bundesdatenschutzgesetzes (BDSG) ist
+              
+              N Hartjenstein, Richardstr. 101b, 12043 Berlin
+              
+              Sofern Sie der Erhebung, Verarbeitung oder Nutzung Ihrer Daten durch N Hartjenstein gemäß den datenschutzrechtlichen Bestimmungen insgesamt oder für einzelne Maßnahmen widersprechen möchten, richten Sie Ihren Widerspruch per Brief an folgende Kontaktdaten:
+              
+              Richardstr. 101b, 12043 Berlin
+              
+              Wir legen größten Wert auf den Schutz Ihrer Daten und die Wahrung Ihrer Privatsphäre. Nachstehend informieren wir Sie deshalb über die Erhebung und Verwendung persönlicher Daten bei Nutzung unserer Webseite.
+              </p>
+              
+              <h2>Erheben, Speichern und Verwenden personenbezogener Daten</h2> 
+                
+              <p>Bei dem Besuch unserer Website erheben, verwenden und speichern wir Ihre personenbezogenen Daten. Personenbezogene Daten sind nach § 3 Abs. 1 BDSG Einzelangaben über persönliche oder sachliche Verhältnisse einer bestimmten oder bestimmbaren natürlichen Person (Betroffener).
+                
+                
+                Datenerhebung unter strenger Beachtung der Gesetze
+                
+                Bei der Erhebung, dem Verwenden und Speichern von personenbezogenen Daten beachten wir die Vorschriften des Bundesdatenschutzgesetzes, des Telemediengesetzes und ggf. weiterer anwendbarer Datenschutzbestimmungen. Alle Kundendaten werden unter Beachtung der einschlägigen Vorschriften des Bundesdatenschutzgesetzes (BDSG) und des Telemediengesetzes (TMG) von uns gespeichert und verarbeitet.
+                </p>
+                <h2>Cookies</h2>
+                
+                <p>Unsere Internetseite verwendet an mehreren Stellen so genannte Cookies. „Cookies“ sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Sie dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Des Weiteren ermöglichen Cookies unseren Systemen, Ihren Browser zu erkennen und Ihnen Services anzubieten. Cookies enthalten keine Personenbezogenen Daten. Sie haben die Möglichkeit, das Abspeichern von Cookies auf Ihrem Rechner durch entsprechende Einstellungen in Ihrem Browser zu verhindern. Hierdurch könnte allerdings der Funktionsumfang unseres Angebotes eingeschränkt werden.
+                </p>
+                
+                <h2>Google-Analytics</h2>
+                
+                <p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.
+                Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Die IP-Anonymisierung ist auf dieser Website aktiv. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen.
+                Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: http://tools.google.com/dlpage/gaoptout?hl=de
+                </p>
+                
+                
+                <h2>Auskunft</h2>
+        
+                <p>
+                Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten Daten sowie das Recht auf Berichtigung, Löschung bzw. Sperrung. Wenden Sie sich hierzu bitte an die im Impressum angegebene Kontaktadresse. Wir stehen Ihnen jederzeit gern für weitergehende Fragen zu unseren Hinweisen zum Datenschutz und zur Verarbeitung Ihrer persönlichen Daten zur Verfügung.
+                
+        
+                </p>
+            </div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
+          </div>
+          <div class="footer-menu">
+            
+          </div>
 				</div>
-			</div>
-		</div>
-
+      </div>
+    </div>
+    <footer>
+      <a href="#" data-toggle="modal" data-target="#Modal-dsgvo">Datenschutzerklärung</a>
+    </footer>
 		<!-- Bootstrap core JavaScript
 			================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/SmoothScroll.js"></script>
 		<script src="js/theme-scripts.js"></script>
@@ -349,11 +505,24 @@
 		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
-		<script src="js/require.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+ 
+        <script src="js/parsley.js"></script>
+        <script src="js/form.js"></script>
+<!--     <script src="js/require.js"></script>   -->  
+    <script src="js/helper.js"></script>
 		<!-- Leave out Storage -->
 		<!-- <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script> -->
-		<script>"js/helper.js"</script>
-		
+
+
+
+
+    <script type="text/javascript" id="cookiebanner"
+    data-zindex="1000"
+    src="js/cookiebanner.js">
+  
+  </script>
+
+
 	</body>
 </html>

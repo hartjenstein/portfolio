@@ -322,11 +322,11 @@ font-weight: 700;
     margin-top: -35vh;
 }*/
 
-#portfolio-scroll > h2 {
+a.portfolio-scroll h2 {
     display: inline-block
 }
 
-#portfolio-scroll > h2:hover {
+a.portfolio-scroll > h2:hover {
     text-decoration: inherit;
     text-decoration-color: #fec503;
 }
@@ -552,9 +552,13 @@ color: #565656;
 	padding: 18px 30px 35px 30px;
 	line-height: 24px;
 }
+#about__title, #about__position {
+  color: grey;
+}
+
 
 /*--------------------
-4.7. Contacts
+4.7. Contact
 --------------------*/
 
 section#contact form {
@@ -590,6 +594,18 @@ section#contact .form-group input, section#contact .form-group textarea {
 
 .contact i {
     margin-right: 5px;
+}
+
+
+.alert {
+  display: none;
+}
+
+.parsley-required, .parsley-type, .parsley-pattern {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: red;
+  list-style: none;
 }
 
 /*--------------------
@@ -628,21 +644,76 @@ footer p a span {
     margin:0.5%;
     border: solid 2px black;
 }
-   .modal h1,
-    .modal h2,
-   .modal  h3,
-    .modal h4,
-    .modal h5,
-    .modal h6 {
-        font-weight: 400;
-    }
+  .modal h1,
+  .modal h2,
+  .modal h3,
+  .modal h4,
+  .modal h5,
+  .modal h6 {
+    font-weight: 400;
+  }
 
 
 .modal-content {
     border-radius: 0;	
-    padding: 0;
     border: solid 2px black;
 }
+.modal-body {
+  padding: 0;
+}
+
+.modal-item-container {
+  border: none;
+  box-shadow: none;
+}
+
+.modal-item-container ul {
+  padding: 0;
+}
+.modal-item-container h4 {
+  padding: 2rem;
+}
+
+.modal-item {
+  border-bottom: 2px solid  rgb(255, 223, 223);
+  font-weight: bold;
+  list-style-type: none;
+  padding: 2rem;
+}
+
+a:first-child .modal-item {
+  border-top: 2px solid rgb(255, 223, 223);
+}
+
+.modal li span {
+  font-size: 2rem;
+}
+
+.modal-item p {
+  margin-left: 0;
+}
+
+h4.modal-item__feature-title {
+  padding: 0;
+  padding-top: 1.2rem;
+}
+
+.modal-item:hover {
+  background: rgb(254, 243, 243);
+}
+
+.modal-item:hover li, .modal-item:hover span {
+  color: #337ab7;
+}
+
+.modal-body .modal-item p, a {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.modal-body h4 {
+ font-weight: 500;
+}
+
 .modal-header .close {
     font-size: 30px;
     	
@@ -650,47 +721,59 @@ footer p a span {
 .modal-title {    
 /*	text-transform: uppercase;*/
     font-size: 1.6em;
-    
-  
 }
 
-.modal-body {
-    padding: 1%;
-    opcacity: 0;
-}
+
 .modal-body h3{
 	padding-left: 15px;
 }
 
 .modal-body p {
-	margin: 30px 20px;
     color: #2D2D2D;	
     font-weight: 400;	
 }
 
 .modal-body a {
-	margin: 30px 20px;
-	color: red;		
+  text-decoration: none;	
+  border: none;
 }
-.modal-works {
-font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #fff;
-    margin: 25px 20px;
+
+ul.modal-item__features {
+ display: flex;   
+ justify-content: flex-start; 
+ flex-wrap: wrap;   
+}
+
+ul.modal-item__features li {
+  display: block;
+  margin-bottom: 1rem;
+  margin-right: 4rem;
+ /*  flex: 0 0 40%; */
+  max-width: 100;
 }
 
 .modal-works span {
-	background-color: black;
-    margin-right: 15px;
-    padding: 5px 10px;
-}
-.modal-item {
-    font-weight: bold;
-
+  background-color: black;
+  color: white;
+  margin-right: 15px;
+  padding: 5px 10px;
 }
 
+
+.modal-footer {
+  border: none;
+}
+
+#Modal-dsgvo .modal-body {
+    opacity: 1;
+    padding: 2rem;
+}
+#Modal-dsgvo .modal-body h2,h3,h4,p {
+  color: black;
+}
+#Modal-dsgvo p {
+  margin-left: 0;
+}
 /*--------------------
 7. Components
 --------------------*/

@@ -1,27 +1,30 @@
 // Initialize Firebase
-$(function () {
 
-		  
+$(function () {
     var config = {
-        apiKey: SECRET_FIREBASE,
-        authDomain: "contact-form-portfoilio.firebaseapp.com",
-        databaseURL: "https://contact-form-portfoilio.firebaseio.com",
-        projectId: "contact-form-portfoilio",
-        storageBucket: "contact-form-portfoilio.appspot.com",
-        messagingSenderId: "450720183164"
+      apiKey: "AIzaSyCz2d-MrDktVr2H31KZ5BQl0P6A0nEeNd8",
+      authDomain: "contact-form-portfolio-236c6.firebaseapp.com",
+      databaseURL: "https://contact-form-portfolio-236c6.firebaseio.com",
+      projectId: "contact-form-portfolio-236c6",
+      storageBucket: "contact-form-portfolio-236c6.appspot.com",
+      messagingSenderId: "820248568788"
     };
     firebase.initializeApp(config);
-    $('.js-form').on('submit', e => {
+    $("#submit").on('click', function(e){
+      console.log(e)
+      console.log('fired')
+        setTimeout(() => {
+          
+     
         e.preventDefault(); // no reload
         const name = $('#name').val();
         const email = $('#email').val();
         const message = $('#message').val();
-        console.log(email, name, message);
         firebase.auth().signInAnonymously()
         .then(user => {
             var isAnonymous = user.isAnonymous;
             var uid = user.uid;
-            console.log(uid)
+
 
             // create todays date ----
             var today = new Date();
@@ -38,13 +41,13 @@ $(function () {
             var today = dd+'/'+mm+'/'+yyyy;
             // -------------------------
             
-                firebase.database().ref('users/' + uid).set({
+                firebase.database().ref('messages/' + uid).set({
                   username: name,
                   email: email,
                   message: message,
                   timestamp: today
                 });
-            alert("Thank you for your message! I will get back to you A.S.A.P.")  
+      
             $('#name').val('');
             $('#email').val('');
             $('#message').val('');
@@ -56,6 +59,7 @@ $(function () {
             var errorMessage = error.message;
               // ...
         });
-        
+      }, 500);
     });
-  });
+
+});
